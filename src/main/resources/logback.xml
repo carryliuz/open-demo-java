@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <substitutionProperty name="log.base" value="/var/log/gzlle" />
+    <substitutionProperty name="app.name" value="open-demo-java" />
+    <jmxConfigurator />  
+    <timestamp key="byDay" datePattern="yyyy-MM-dd" />
+    
+    <appender name="MY_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.base}/${app.name}.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.base}/${app.name}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>7</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[Awaken]%date %level [%thread] %10logger [%file:%line] %message%n</pattern>
+		</layout>
+	</appender>
+	
+	<root level="INFO">  
+        <appender-ref ref="CONSOLE" />  
+        <appender-ref ref="MY_FILE" />
+    </root>
+	
+	<springProfile name="dev,uat">
+	    <logger name="com.awaken" level="DEBUG" />
+		<logger name="java.sql" level="DEBUG" /> 
+		<logger	name="org.apache.ibatis" level="DEBUG" /> 
+		<logger name="org.mybatis.spring" level="DEBUG" /> 
+	</springProfile>
+    
+    <springProfile name="test,product">
+        <logger name="org.springframework" level="WARN" />
+        <logger name="springfox.documentation.spring.web" level="WARN" />
+        <logger name="com.xxl.job" level="WARN" />
+    </springProfile> 
+</configuration>  
