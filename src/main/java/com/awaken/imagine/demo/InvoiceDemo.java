@@ -24,7 +24,7 @@ public class InvoiceDemo extends AbstractDemo {
 	/**
 	 * 查询开票配置
 	 */
-	public static void getBalance() {
+	public static void getInvoiceSetting() {
 		String result = doGet(API_INVOICE_GETSETTING.replace("{providerId}", PROVIDER_ID), null, getToken());
 		System.out.println("result：" + result);
 		InvoiceSettingModel resp = JSON.parseObject(result, InvoiceSettingModel.class);
@@ -113,7 +113,7 @@ public class InvoiceDemo extends AbstractDemo {
 	}
 	public static void main(String[] args) {
 		// 查询开票配置
-//		getBalance();
+//		getInvoiceSetting();
 		// 查询开票订单列表
 //		listInvoiceOrder();
 		// 创建发票申请
