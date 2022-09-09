@@ -42,8 +42,8 @@ public class InvoiceDemo extends AbstractDemo {
 		InvoiceOrderQuery req = new InvoiceOrderQuery();
 		req.setProviderId(PROVIDER_ID);
 		req.setStatus(10);
-//		req.setStartDate("20220801");
-//		req.setEndDate("20220906");
+		req.setStartDate("2021-08-01 00:00:01");
+		req.setEndDate("2022-09-06 23:59:59");
 //		req.setPageNum(1); // 页码，默认1
 		req.setPageSize(5); // 每页行数，默认10
 		String result = doPostJson(API_INVOICE_LISTORDER, JSON.toJSONString(req), getToken());
@@ -100,9 +100,9 @@ public class InvoiceDemo extends AbstractDemo {
 	public static void listInvoiceBatch() {
 		InvoiceBatchQuery req = new InvoiceBatchQuery();
 		req.setProviderId(PROVIDER_ID);
-		req.setBatchNo("1662538675449");
-//		req.setStartDate("20220801");
-//		req.setEndDate("20220906");
+//		req.setBatchNo("1662538675449");
+		req.setStartDate("20220801");
+		req.setEndDate("20220906");
 //		req.setPageNum(1); // 页码，默认1
 //		req.setPageSize(5); // 每页行数，默认10
 		String result = doPostJson(API_INVOICE_LISTBATCH, JSON.toJSONString(req), getToken());
@@ -115,11 +115,11 @@ public class InvoiceDemo extends AbstractDemo {
 		// 查询开票配置
 //		getInvoiceSetting();
 		// 查询开票订单列表
-//		listInvoiceOrder();
+		listInvoiceOrder();
 		// 创建发票申请
 //		addInvoiceBatch();
 		// 查询发票申请列表
-		listInvoiceBatch();
+//		listInvoiceBatch();
 	}
 	
 }

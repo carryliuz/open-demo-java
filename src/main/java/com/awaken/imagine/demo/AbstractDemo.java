@@ -20,8 +20,8 @@ public class AbstractDemo {
 	protected static final Logger logger = LoggerFactory.getLogger(AbstractDemo.class);
 
 	/* 对接参数，联系职乐技术人员获取 */
-	public static final String APP_KEY = "687724246335488000";
-	public static final String APP_SECRET = "2C8C3BA3052FE5764F469DA4754F57D9";
+	public static final String APP_KEY = "68772424633548...."; // 你的appkey
+	public static final String APP_SECRET = "2C8C3BA3052FE5764F469DA4754F...."; // 你的appSecret
 	public static final String PROVIDER_ID = "686873738108469248"; // 服务商ID
 	public static final String CORP_ID = "684061554710151168"; // 企业主体ID
 	
@@ -90,7 +90,7 @@ public class AbstractDemo {
 			logger.error("###error，获取token失败", e);
 		}
 		return null;
-//		String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiaW1hZ2luZS1tYWluIiwiaW1hZ2luZS1vcGVuIiwiaW1hZ2luZS1hdXRoIl0sInNjb3BlIjpbInByb2ZpbGUiXSwiZXhwIjoxNjYyNTQ1Njk5LCJqdGkiOiI2NGJjZjU3My00MmU4LTRmZmYtYjUxYi02ZmE5MWEzYzYyMzAiLCJjbGllbnRfaWQiOiI2ODc3MjQyNDYzMzU0ODgwMDAifQ.canVZghnXgzb72Hrc5ZR0xnE9H7cgctX0iwvl49vsS5vPpksvyNAQnkFIpwpNzyxath0ovqiSvVmEy_DKKZ4_vv3sWYAjC9ciwfoi9K6w4gkkyFuyC4lu3F1x8Q9BFWrb1lkZ-tTUE3UiqznKYiPXfWBMQRrJRE19F8lbn20Q3Q";
+//		String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiaW1hZ2luZS1tYWluIiwiaW1hZ2luZS1vcGVuIiwiaW1hZ2luZS1hdXRoIl0sInNjb3BlIjpbInByb2ZpbGUiXSwiZXhwIjoxNjYyNzI3ODg5LCJqdGkiOiI4YjdjNjJjNi04MDk5LTRmNWQtYWM1Ni0zMDQ0OTkyOGY1MWEiLCJjbGllbnRfaWQiOiI2ODc3MjQyNDYzMzU0ODgwMDAifQ.ZQmPj3ymZ8eCB-ypzMN0KaKsu2Sg3XGnyD9gYHDYowQyTk07JjRUTK-J5pXaP0Jt4rv-ELAxsUOylCtu-39ONUgJ_8DtWAK2gGef5F10qGfR7zyBajZPgDk3kaRqS5nWsFoLgeBFHdYRzLFcwW_ZkTgq3V60gQSBEkCN16RSqzM";
 //		return token;
 	}
 	
