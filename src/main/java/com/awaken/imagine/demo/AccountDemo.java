@@ -51,7 +51,7 @@ public class AccountDemo extends AbstractDemo {
 		req.setAmount(new BigDecimal("2"));
 		req.setBank("中国农业银行");
 		req.setBankNo("6228480038789xxxxxx");
-		req.setBankName("江西正邦科技股份有限公司");
+		req.setBankName("江西xx科技股份有限公司");
 		req.setPayType(0); // 支付类型,0,银行转账 1,支付宝
 		req.setPayTime("2022-09-04");
 		req.setNotifyUrl("https://www.baidu.com");

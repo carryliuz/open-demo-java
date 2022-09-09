@@ -29,7 +29,7 @@ public class OrderDemo extends AbstractDemo {
 		req.setBankCardNo("6217003230005xxxxxx");
 		req.setPaymentType(1); // 收款方式，选填 1:银行卡，2:支付宝
 		req.setBankPhone("1581681xxxx");
-		req.setName("谢秋芳");
+		req.setName("李二牛");
 		req.setPapersNo("43112619850824xxxx");
 		req.setPapersType(0); // 证件类型，0:身份证 1:护照 2:军官证 3:港澳台身份证
 		req.setNotifyUrl("https://www.baidu.com");
@@ -38,7 +38,6 @@ public class OrderDemo extends AbstractDemo {
 		req.setSign(SignUtil.createSign(req, APP_KEY));
 		String result = doPostJson(API_ORDER_ADD, JSON.toJSONString(req), getToken());
 		System.out.println("result：" + result);
-		// {"id":"745317464908234752","tradeNo":"T20220906000001","corpId":"684061554710151168","bizFee":0.01,"status":0,"created":"2022-09-06 16:11:32","providerId":"686873738108469248","employeeNo":null,"employeeId":null,"bankCardNo":"6217003230005925304","bankName":"谢秋芳","bankPhone":"15816816588","name":"谢秋芳","papersNo":"431126198508247028","papersType":0,"extendParams":"{\"uid\":\"U0001\"}","sex":"女","birthday":"19850824"}
 		OrderModel resp = JSON.parseObject(result, OrderModel.class);
 		if (resp.getId() != null) {
 			logger.info("添加提现订单成功，orderId：{}", resp.getId());
